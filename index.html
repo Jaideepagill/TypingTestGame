@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+  </style>
+  <title>Typing Speed Tester</title>
+</head>
+
+<body>
+  <main class="space">
+    <section class="container">
+      <div class="app">
+        <div class="labels">
+          <p>Time: <span id="time"></span></p>
+          <p>WPM: <span id="wpm"></span></p>
+          <p>CPM: <span id="cpm"></span></p>
+          <p>Mistakes: <span id="mistakes">0</span></p>
+        </div>
+        <div class="canvas">
+          <input type="text" id="canvas-input" class="hide">
+          <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, ipsa laborum? Impedit alias
+            consequuntur expedita eius rem? Tempore sunt sed at, maxime iste illum praesentium aspernatur mollitia,
+            magnam laboriosam hic voluptatibus impedit ipsa ut culpa quas blanditiis, nisi quibusdam vel deserunt fugit
+            eaque nesciunt magni sit? Repudiandae dolorem dignissimos est!</p>
+        </div>
+        <div class="buttons">
+          <button id="try-again">Try agian</button>
+          <button id="show-input">Show text</button>
+        </div>
+        <div class="result hidden">
+          <h2 class="comment">
+            Your Input...
+          </h2>
+          <p class="canvas">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum distinctio quos saepe ut praesentium in. Id
+            nobis consectetur earum saepe quas, maiores, quisquam corporis dolores, repellendus tempora dolore?
+            Distinctio voluptates, fugit consequuntur harum aliquam, doloremque assumenda nesciunt corrupti cumque in
+            facilis eveniet. Alias reiciendis repellat, officia nemo impedit perspiciatis quaerat?
+          </p>
+        </div>
+    </section>
+  </main>
+  <script src="paragraph.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
