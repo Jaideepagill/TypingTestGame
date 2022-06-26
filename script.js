@@ -15,6 +15,7 @@ const btnTryAgain = document.getElementById("try-again");
 const btnShowInput = document.getElementById("show-input");
 const result = document.querySelector(".result");
 const resultDisp = document.querySelector(".result .canvas");
+const adaptiveDisplay = document.querySelector(".adaptive-display");
 
 let index = 0;
 let inputIndex = 0;
@@ -167,4 +168,8 @@ btnTryAgain.addEventListener("click", () => {
 	result.classList.add("hidden");
 	resetUI();
 	initGame();
+});
+
+adaptiveDisplay.addEventListener("click", (e) => {
+	e.preventDefault();
 });

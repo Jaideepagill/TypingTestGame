@@ -1,3 +1,16 @@
+:root{
+  --bg-dark-color: #333;
+  --bg-light-color: rgb(231,254,255);
+  --bg-app-dark-color: #444;
+  --bg-app-light-color: rgb(135,206,250);
+  --bg-label-button-dark-color: #999;
+  --bg-label-button-light-color: rgb(205, 234, 239);
+  --bg-canvas-dark-color: #c4c4c4;
+  --bg-canvas-light-color: white;
+  --bg-correct-dark-color: #555;
+  --bg-correct-light-color:rgb(60,208,112);
+}
+
 *{
  box-sizing: border-box;
  margin: 0;
@@ -18,7 +31,7 @@ body{
   height: 100vh;
   width: 100%;
   overflow: auto;
-  background-color: #333;
+  background-color: var(--bg-light-color);
   position: relative;
   /* padding-bottom: 20px; */
 }
@@ -34,7 +47,7 @@ body{
 }
 
 .app{
-  background: #444;
+  background: var(--bg-app-light-color);
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 30px;
@@ -54,7 +67,7 @@ body{
 }
 
 .labels p:not(:first-child){
-  background-color: #999;
+  background-color: var(--bg-label-button-light-color);
   border: 1px solid #333;
   border-radius: 5px;
   
@@ -75,11 +88,16 @@ body{
 
 .buttons button{
   padding: 5px 10px;
-  background-color: #999;
+  background-color: var(--bg-label-button-light-color);
   border: 1px solid #333;
   border-radius: 5px;
   box-shadow: 5px 5px 25px;
   font-size: 16px;
+}
+
+/* Adaptive Display Button */
+.adaptive-display{
+  width: 4rem;
 }
 
 /* Canvas and text */
@@ -97,7 +115,7 @@ body{
   border-radius: 10px;
   padding: 10px 15px;
   margin: 10px 0;
-  background-color: #c4c4c4;
+  background-color: var(--bg-canvas-light-color);
 }
 
 /* Hiding input widget */
@@ -120,7 +138,7 @@ body{
 /* Game classes */
 
 .correct{
-  color: #555;
+  color: var(--bg-correct-light-color);
 }
 
 .incorrect{
