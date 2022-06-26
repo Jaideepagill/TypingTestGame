@@ -1,0 +1,161 @@
+*{
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hidden{
+  display: none;
+}
+
+.space{
+  /* display: flex;
+  align-items: center; */
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+  background-color: #333;
+  position: relative;
+  /* padding-bottom: 20px; */
+}
+
+.container{
+  position: absolute;
+  top: 8%;
+  left: 0;
+  right: 0;
+  max-width: 600px;
+  min-width: 400px;
+  margin : auto;
+}
+
+.app{
+  background: #444;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+/* Labels */
+.labels{
+  display: flex;
+  justify-content: space-around;
+}
+
+.labels p {
+  flex: 1 0 50px;
+  margin: 0 5px;
+  padding: 5px;
+  line-height: 24px;
+}
+
+.labels p:not(:first-child){
+  background-color: #999;
+  border: 1px solid #333;
+  border-radius: 5px;
+  
+}
+
+/* For single line between labels */
+/* .labels p:not(:first-child){
+  border-left: solid 1px #333;
+} */
+
+/* Buttons*/
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.buttons button{
+  padding: 5px 10px;
+  background-color: #999;
+  border: 1px solid #333;
+  border-radius: 5px;
+  box-shadow: 5px 5px 25px;
+  font-size: 16px;
+}
+
+/* Canvas and text */
+
+.text{
+  font-weight: bold;
+  font-size: 21px;
+  text-align: left;
+  letter-spacing: 1px;
+  word-break: break-all;
+}
+
+.canvas{
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin: 10px 0;
+  background-color: #c4c4c4;
+}
+
+/* Hiding input widget */
+.hide{
+  opacity: 0;
+  z-index : -1;
+  position: absolute;
+}
+/* Result */
+.comment{
+  margin: 20px 0 10px;
+  padding-left: 30px;
+  color: rgb(255, 221, 0);
+}
+
+.result .canvas{
+  margin-bottom: 0px;
+}
+
+/* Game classes */
+
+.correct{
+  color: #555;
+}
+
+.incorrect{
+  color: rgb(205, 51, 0);
+}
+
+/* animation cursor*/
+
+.text span{
+  position: relative;
+}
+
+.active::before{
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  border-radius: 5px;
+  background-color: red;
+  animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink{
+  50%{
+    opacity: 1;
+  }
+}
+
+/*
+  Bugs encountered
+
+  1. when styling letter of first of a line the letter will move to previous line if exists.
+    solution: 
+      Inefficient: word-break: break-all;
+*/
