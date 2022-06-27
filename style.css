@@ -1,14 +1,9 @@
 :root{
-  --bg-dark-color: #333;
-  --bg-light-color: rgb(231,254,255);
-  --bg-app-dark-color: #444;
-  --bg-app-light-color: rgb(135,206,250);
-  --bg-label-button-dark-color: #999;
-  --bg-label-button-light-color: rgb(205, 234, 239);
-  --bg-canvas-dark-color: #c4c4c4;
-  --bg-canvas-light-color: white;
-  --bg-correct-dark-color: #555;
-  --bg-correct-light-color:rgb(60,208,112);
+  --bg-color: #333;
+  --bg-app-color: #444;
+  --bg-label-button-color: #999;
+  --bg-canvas-color: #c4c4c4;
+  --bg-correct-color: #555;
 }
 
 *{
@@ -31,7 +26,7 @@ body{
   height: 100vh;
   width: 100%;
   overflow: auto;
-  background-color: var(--bg-light-color);
+  background-color: var(--bg-color);
   position: relative;
   /* padding-bottom: 20px; */
 }
@@ -47,7 +42,7 @@ body{
 }
 
 .app{
-  background: var(--bg-app-light-color);
+  background: var(--bg-app-color);
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 30px;
@@ -67,7 +62,7 @@ body{
 }
 
 .labels p:not(:first-child){
-  background-color: var(--bg-label-button-light-color);
+  background-color: var(--bg-label-button-color);
   border: 1px solid #333;
   border-radius: 5px;
   
@@ -88,7 +83,7 @@ body{
 
 .buttons button{
   padding: 5px 10px;
-  background-color: var(--bg-label-button-light-color);
+  background-color: var(--bg-label-button-color);
   border: 1px solid #333;
   border-radius: 5px;
   box-shadow: 5px 5px 25px;
@@ -115,7 +110,7 @@ body{
   border-radius: 10px;
   padding: 10px 15px;
   margin: 10px 0;
-  background-color: var(--bg-canvas-light-color);
+  background-color: var(--bg-canvas-color);
 }
 
 /* Hiding input widget */
@@ -138,7 +133,7 @@ body{
 /* Game classes */
 
 .correct{
-  color: var(--bg-correct-light-color);
+  color: var(--bg-correct-color);
 }
 
 .incorrect{
