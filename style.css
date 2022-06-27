@@ -29,6 +29,7 @@ body{
   background-color: var(--bg-color);
   position: relative;
   /* padding-bottom: 20px; */
+  transition: background-color 0.5s;
 }
 
 .container{
@@ -46,6 +47,7 @@ body{
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 30px;
+  transition: background-color 0.5s;
 }
 
 /* Labels */
@@ -65,6 +67,7 @@ body{
   background-color: var(--bg-label-button-color);
   border: 1px solid #333;
   border-radius: 5px;
+  transition: background-color 0.5s;
   
 }
 
@@ -88,6 +91,7 @@ body{
   border-radius: 5px;
   box-shadow: 5px 5px 25px;
   font-size: 16px;
+  transition: background-color 0.5s;
 }
 
 /* Adaptive Display Button */
@@ -111,6 +115,7 @@ body{
   padding: 10px 15px;
   margin: 10px 0;
   background-color: var(--bg-canvas-color);
+  transition: background-color 0.5s;
 }
 
 /* Hiding input widget */
@@ -134,6 +139,7 @@ body{
 
 .correct{
   color: var(--bg-correct-color);
+  transition: background-color 0.5s;
 }
 
 .incorrect{
