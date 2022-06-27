@@ -15,6 +15,8 @@ const btnTryAgain = document.getElementById("try-again");
 const btnShowInput = document.getElementById("show-input");
 const result = document.querySelector(".result");
 const resultDisp = document.querySelector(".result .canvas");
+const adaptiveDisplay = document.querySelector(".adaptive-display");
+const cssVariables = document.querySelector(":root");
 
 let index = 0;
 let inputIndex = 0;
@@ -23,6 +25,7 @@ let mistakes = 0;
 let maxTime = 60,
 	timeLeft = maxTime,
 	state = true,
+	colorState = true,
 	timer = 0;
 
 // Reset UI
@@ -167,4 +170,41 @@ btnTryAgain.addEventListener("click", () => {
 	result.classList.add("hidden");
 	resetUI();
 	initGame();
+});
+const bg_dark_color = "#333",
+	bg_light_color = "rgb(231,254,255)",
+	bg_app_dark_color = "#444",
+	bg_app_light_color = "rgb(135,206,250)",
+	bg_label_button_dark_color = "#999",
+	bg_label_button_light_color = "rgb(205, 234, 239)",
+	bg_canvas_dark_color = "#c4c4c4",
+	bg_canvas_light_color = "white",
+	bg_correct_dark_color = "#555",
+	bg_correct_light_color = "rgb(60,208,112)";
+adaptiveDisplay.addEventListener("click", (e) => {
+	e.preventDefault();
+	if (colorState) {
+		cssVariables.style.setProperty("--bg-color", bg_light_color);
+		cssVariables.style.setProperty("--bg-app-color", bg_app_light_color);
+		cssVariables.style.setProperty(
+			"--bg-label-button-color",
+			bg_label_button_light_color
+		);
+		cssVariables.style.setProperty("--bg-canvas-color", bg_canvas_light_color);
+		cssVariables.style.setProperty(
+			"--bg-correct-color",
+			bg_correct_light_color
+		);
+		colorState = !colorState;
+	} else {
+		cssVariables.style.setProperty("--bg-color", bg_dark_color);
+		cssVariables.style.setProperty("--bg-app-color", bg_app_dark_color);
+		cssVariables.style.setProperty(
+			"--bg-label-button-color",
+			bg_label_button_dark_color
+		);
+		cssVariables.style.setProperty("--bg-canvas-color", bg_canvas_dark_color);
+		cssVariables.style.setProp;
+		colorState = !colorState;
+	}
 });
